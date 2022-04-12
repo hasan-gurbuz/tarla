@@ -55,11 +55,37 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 44),
+                    padding: const EdgeInsets.only(left: 45),
                     child: Row(
                       children: [
-                        Text("Üye Girişi"),
-                        Text("Hesap Oluştur"),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 10),
+                          child: Container(
+                            height: 40,
+                            width: 149,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(6),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 44),
+                              child: Row(
+                                children: [
+                                  Text("Üye Girişi"),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          height: 40,
+                          width: 149,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          child: Center(child: Text("Hesap Oluştur")),
+                        ),
                       ],
                     ),
                   ),
