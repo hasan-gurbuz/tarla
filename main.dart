@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:forfamily/pages/Homepage.dart';
+import 'package:forfamily/pages/SignPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +28,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: MediaQuery.of(context).size.height/1.034,
+              height: MediaQuery.of(context).size.height/1.043,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -34,62 +36,126 @@ class HomePage extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("Tarla", style: TextStyle(fontSize: 28, color: Colors.white, fontWeight: FontWeight.w600),),
-                  Text("Tarla'dan evimize, organik ve taze!", style: TextStyle(fontSize: 13, color: Colors.white, fontWeight: FontWeight.w500),),
-                  Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 18),
-                        child: Container(
-                          height: 40,
-                            width: 308,
-                            decoration: BoxDecoration(
-                              color: Colors.lightBlue,
-                              borderRadius: BorderRadius.circular(6),
-                            ),
-                            child: Center(child: Text("Üreticileri Listele", style: TextStyle(color: Colors.white, fontSize: 15),))),
-                      ),
-                    ],
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 45),
-                    child: Row(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 120),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Tarla", style: TextStyle(fontSize: 28, color: Colors.white, fontWeight: FontWeight.w600),),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 16),
+                      child: Text("Tarla'dan evinize, organik ve taze!", style: TextStyle(fontSize: 13, color: Colors.white, fontWeight: FontWeight.w500),),
+                    ),
+                    Column(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(right: 10),
+                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 18),
                           child: Container(
+                            height: 40,
+                              width: 308,
+                              decoration: BoxDecoration(
+                                color: Colors.lightBlue,
+                                borderRadius: BorderRadius.circular(6),
+                              ),
+                              child: Center(child: Text("Üreticileri Listele", style: TextStyle(color: Colors.white, fontSize: 15),))),
+                        ),
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 45),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(right: 10),
+                            child: Container(
+                              height: 40,
+                              width: 149,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(6),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 44),
+                                child: Row(
+                                  children: [
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.of(context).push(MaterialPageRoute(builder: (_) => Homepage()));
+                                      },
+                                        child: Text("Üye Girişi")),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
                             height: 40,
                             width: 149,
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(6),
                             ),
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 44),
-                              child: Row(
-                                children: [
-                                  Text("Üye Girişi"),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          height: 40,
-                          width: 149,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(6),
-                          ),
-                          child: Center(child: Text("Hesap Oluştur")),
-                        ),
-                      ],
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(builder: (_) => SignPage()));
+                              },
+                                child: Center(child: Text("Hesap Oluştur")),
+                          ),),
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                    Padding(
+                      padding: const EdgeInsets.only(top: 16),
+                      child: Text("Diğer Giriş Seçenekleri", style: TextStyle(color: Colors.white),),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 16),
+                      child: Container(
+                        height: 40,
+                        width: 308,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(6),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 84),
+                          child: Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(right: 10),
+                                child: Image.network("https://www.upload.ee/image/14046627/google.png"),
+                              ),
+                              Text("Google ile Giriş Yap"),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Container(
+                        height: 40,
+                        width: 308,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(6),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 84),
+                          child: Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(right: 10),
+                                child: Image.network("https://www.upload.ee/image/14046629/apple.png"),
+                              ),
+                              Text("Apple ile Giriş Yap"),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
