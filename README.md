@@ -1,0 +1,2 @@
+# tarla
+Merhabalar. Burda kodları bulunan ve devam eden süreçte her yeni gelişmede de yeni kodları eklenecek olan tarla mobil uygulamasının reporsitorysindesiniz.Tarla'nın asıl amacı e-ticaret uygulaması olmmaktır.Tarla çiftçi ve köylünün ürettiği her bir ürünü yalnızca tek aracıya indirerek, üreticiden aldığını ürünü tüketiciye ulaştırmasıdır, bu sayede hem tüketici dahab uygun ve organik ürünler bulacakken , çiftçide ürettiği ürünün hakkını alabilecek.
